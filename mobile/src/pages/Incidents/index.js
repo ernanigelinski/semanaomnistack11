@@ -54,7 +54,7 @@ export default function Incidents() {
                     Total de <Text style={styles.headerTextBold}>0 casos</Text>.
                 </Text>
             </View>
-            <Text style={styles.titlte}>Bem-vindo</Text>
+            <Text style={styles.title}>Bem-vindo</Text>
             <Text style={styles.description}>Escolha um dos casos abaixo e salve o dia</Text>
 
             <FlatList

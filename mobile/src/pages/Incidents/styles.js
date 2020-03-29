@@ -5,22 +5,22 @@ export default StyleSheet.create({
     container: {
         flex: 1,
         paddingHorizontal: 24,
-        paddingTop: Constants.statusBarHeight +20
+        paddingTop: Constants.statusBarHeight +20,
     },
 
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
     },
 
     headerText: {
         fontSize: 15,
-        color: '#737380'
+        color: '#737380',
     },
 
     headerTextBold: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
 
     title: {
@@ -28,7 +28,7 @@ export default StyleSheet.create({
         marginBottom: 16,
         marginTop: 48,
         color: '#13131a',
-        fontWeight: "bold"
+        fontWeight: "bold",
     },
 
     description: {
@@ -38,20 +38,20 @@ export default StyleSheet.create({
     },
 
     incidentList: {
-        marginTop: 32
+        marginTop: 32,
     },
 
     incident: {
         padding: 24,
         borderRadius: 8,
         backgroundColor: '#FFF',
-        marginBottom: 16
+        marginBottom: 16,
     },
 
     incidentProperty: {
         fontSize: 14,
         color:'#41414d',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
 
     incidentValue: {
