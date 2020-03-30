@@ -7,9 +7,12 @@ module.exports = {
         const [count] = await connection('incidents').count();
 
         const incidents = await connection('incidents')
+        //relaciona os dados da ong com os dados do casos cadastrados
         .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
+        //paginação 
         .limit(5)
         .offset((page - 1) * 5)
+        //seleciona os dados do caso e da ong 
         .select([
             'incidents.*',
             'ongs.name',
@@ -18,7 +21,7 @@ module.exports = {
             'ongs.city',
             'ongs.uf'
         ]);
-
+        //total de casos
         response.header('X-Total-Count', count['count(*)']);
 
         return response.json(incidents);
@@ -26,6 +29,7 @@ module.exports = {
 
     async create(request, response) {
         const { title, description, value } = request.body;
+        //pega o id da ong do header da requisição
         const ong_id = request.headers.authorization;
 
         const [id] = await connection('incidents').insert({

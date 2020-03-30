@@ -1,6 +1,7 @@
+// Importar pacotes
 const express = require('express');
 const { celebrate, Segments, Joi } = require('celebrate');
-
+// Importar arquivos
 const OngController = require('./controllers/OngController');
 const IncidentController = require('./controllers/IncidentController');
 const ProfileController = require('./controllers/ProfileController');
@@ -46,4 +47,5 @@ routes.delete('/incidents/:id', celebrate({
     })
 }), IncidentController.delete);
 
+// Exportar variavel rotas do arquivo
 module.exports = routes;
