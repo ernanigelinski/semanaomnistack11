@@ -1,13 +1,14 @@
+//importação dos pacotes
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiPower, FiTrash2 } from 'react-icons/fi';
 
 import api from '../../services/api';
-
+//importa css
 import './styles.css';
-
+//importa imagens
 import logoImg from '../../assets/logo.svg'
-
+//função listar casos
 export default function Profile() {
     const [incidents, setIncidents] = useState([]);
     
@@ -45,7 +46,7 @@ export default function Profile() {
 
         history.push('/');
     }
-
+//html da pagina de listagem dos casos da ong
     return (
         <div className="profile-container">
             <header>

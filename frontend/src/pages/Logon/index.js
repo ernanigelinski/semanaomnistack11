@@ -1,14 +1,15 @@
+//importação dos pacotes
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiLogIn } from "react-icons/fi";
 
 import api from '../../services/api';
-
+//importa o css
 import './styles.css';
-
+//importa as imagens
 import logoImg from '../../assets/logo.svg';
 import heroesImg from '../../assets/heroes.png';
-
+//função para logar
 export default function Logon() {
     const [id, setId] = useState('');
     const history = useHistory();
@@ -21,12 +22,13 @@ export default function Logon() {
 
             localStorage.setItem('ongId', id);
             localStorage.setItem('ongName', response.data.name);
-
+            //direciona para pagina de profile
             history.push('/profile');
         } catch (err) {
             alert('Falha no login, tente novamente');
         }
     }
+    //html da pagina de login
     return (
         <div className="logon-container">
             <section className="form"> 

@@ -1,11 +1,14 @@
+//importação dos pacotes
 import React, {useState} from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+
 import api from '../../services/api';
+//importa css
 import './styles.css';
-
+//importa imagem
 import logoImg from '../../assets/logo.svg';
-
+//função de cadastro de ong
 export default function Register () {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -36,6 +39,7 @@ async function handleRegister(e) {
             alert('Erro no cadastro, tente novamente');
         }
 }
+//html da pagina de cadastro
     return (
         <div className="register-container">
             <div className="content">

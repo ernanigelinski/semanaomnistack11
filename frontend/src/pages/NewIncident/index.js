@@ -1,13 +1,15 @@
+//importação dos pacotes
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft} from 'react-icons/fi';
 
 import api from '../../services/api';
-
+//importa o css
 import './styles.css';
-
+//importa as imagens
 import logoImg from '../../assets/logo.svg'
 
+//função cadastrar um caso
 export default function NewIncident() {
     const [title, setTilte] = useState('');
     const [description, setDescription] = useState('');
@@ -38,6 +40,7 @@ export default function NewIncident() {
             alert('erro ao cadastrar caso, tente novamente');
         }
     }
+    //html da pagina de cadastro
     return (
         <div className="new-incident-container">
             <div className="content">
